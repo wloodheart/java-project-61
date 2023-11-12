@@ -1,10 +1,7 @@
 package hexlet.code;
 
 import hexlet.code.game.Game;
-import hexlet.code.game.impl.Calc;
-import hexlet.code.game.impl.Even;
-import hexlet.code.game.impl.GCD;
-import hexlet.code.game.impl.Progression;
+import hexlet.code.game.impl.*;
 
 import java.util.List;
 
@@ -15,7 +12,8 @@ public class App {
                 new Even(),
                 new Calc(),
                 new GCD(),
-                new Progression()
+                new Progression(),
+                new Prime()
         );
 
         Engine engine = new Engine(games);

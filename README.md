@@ -13,3 +13,6 @@
 
 ### Progression demo:
 [![asciicast](https://asciinema.org/a/620621.svg)](https://asciinema.org/a/620621?autoplay=1)
+
+### Prime demo:
+[![asciicast](https://asciinema.org/a/620626.svg)](https://asciinema.org/a/620626?autoplay=1)
