@@ -10,3 +10,6 @@
 
 ### GCD demo:
 [![asciicast](https://asciinema.org/a/620612.svg)](https://asciinema.org/a/620612?autoplay=1)
+
+### Progression demo:
+[![asciicast](https://asciinema.org/a/620621.svg)](https://asciinema.org/a/620621?autoplay=1)

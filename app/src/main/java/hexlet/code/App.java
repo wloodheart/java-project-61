@@ -4,6 +4,7 @@ import hexlet.code.game.Game;
 import hexlet.code.game.impl.Calc;
 import hexlet.code.game.impl.Even;
 import hexlet.code.game.impl.GCD;
+import hexlet.code.game.impl.Progression;
 
 import java.util.List;
 
@@ -13,7 +14,8 @@ public class App {
         List<Game> games = List.of(
                 new Even(),
                 new Calc(),
-                new GCD()
+                new GCD(),
+                new Progression()
         );
 
         Engine engine = new Engine(games);
