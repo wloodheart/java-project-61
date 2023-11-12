@@ -7,3 +7,6 @@
 
 ### Calc demo:
 [![asciicast](https://asciinema.org/a/620606.svg)](https://asciinema.org/a/620606?autoplay=1)
+
+### GCD demo:
+[![asciicast](https://asciinema.org/a/620612.svg)](https://asciinema.org/a/620612?autoplay=1)
