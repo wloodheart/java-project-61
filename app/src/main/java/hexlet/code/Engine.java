@@ -20,7 +20,7 @@ public class Engine {
                         + game.getCorrectAnswer() + "'.\nLet's try again, " + userName);
                 System.exit(0);
             } else {
-                System.out.println("Correct");
+                System.out.println("Correct!");
             }
         }
         System.out.println("Congratulations, " + userName +"!");
