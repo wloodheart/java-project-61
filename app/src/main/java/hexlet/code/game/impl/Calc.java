@@ -11,7 +11,6 @@ public final class Calc implements Game {
     private final char[] operators = {'+', '-', '*'};
     private String question;
     private String correctAnswer;
-    private final int RANDOM_RANGE = 10;
 
     @Override
     public String getGameName() {
@@ -26,12 +25,13 @@ public final class Calc implements Game {
     @Override
     public void initNextQuestionValues() {
         Random random = new Random();
+        final int randomRange = 10;
         int a;
         int b;
         char currentOperator;
 
-        a = random.nextInt(RANDOM_RANGE);
-        b = random.nextInt(RANDOM_RANGE);
+        a = random.nextInt(randomRange);
+        b = random.nextInt(randomRange);
         currentOperator = operators[random.nextInt(operators.length)];
 
         question = a + " " + currentOperator + " " + b;

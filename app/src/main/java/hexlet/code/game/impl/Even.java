@@ -10,7 +10,6 @@ public final class Even implements Game {
     private final String gameRule = "Answer 'yes' if the number is even, otherwise answer 'no'.";
     private int question;
     private String correctAnswer;
-    private final int RANDOM_RANGE = 100;
 
     @Override
     public String getGameName() {
@@ -25,7 +24,8 @@ public final class Even implements Game {
     @Override
     public void initNextQuestionValues() {
         Random random = new Random();
-        question = random.nextInt(RANDOM_RANGE);
+        final int randomRange = 100;
+        question = random.nextInt(randomRange);
         correctAnswer = getCorrectAnswerByQuestion(question);
     }
 

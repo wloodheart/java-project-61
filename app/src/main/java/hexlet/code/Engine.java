@@ -6,15 +6,16 @@ import java.util.Scanner;
 
 public final class Engine {
     private String userName;
-    private final int GAME_ITERATIONS = 3;
+
 
     public void playGame(Game game) {
         String userAnswer;
+        final int gameIterations = 3;
 
         greet();
         System.out.println(game.getGameRule());
 
-        for (int i = 0; i < GAME_ITERATIONS; i++) {
+        for (int i = 0; i < gameIterations; i++) {
             game.initNextQuestionValues();
             userAnswer = enterFromConsole("Question: " + game.getQuestion() + "\nYour answer: ");
             if (!userAnswer.equalsIgnoreCase(game.getCorrectAnswer())) {
