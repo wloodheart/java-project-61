@@ -17,7 +17,7 @@ public class Engine {
             userAnswer = enterFromConsole("Question: " + game.getQuestion() + "\nYour answer: ");
             if (!userAnswer.equalsIgnoreCase(game.getCorrectAnswer())) {
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '"
-                        + game.getCorrectAnswer() + "'.\nLet's try again, " + userName);
+                        + game.getCorrectAnswer() + "'.\nLet's try again, " + userName + "!");
                 System.exit(0);
             } else {
                 System.out.println("Correct!");
