@@ -29,8 +29,8 @@ public class Progression implements Game {
         int size;
         int missingPos;
 
-        firsValue = random.nextInt(100);
-        step = random.nextInt(100);
+        firsValue = random.nextInt(20);
+        step = random.nextInt(10);
         size = random.nextInt(10) + 5;
         missingPos = random.nextInt(size);
         sequence.append(firsValue);
