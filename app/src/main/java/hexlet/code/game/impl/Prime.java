@@ -23,10 +23,10 @@ public final class Prime implements Game {
     @Override
     public void initNextQuestionValues() {
         Random random = new Random();
-        int randomRange = 100;
+        final int RANDOM_RANGE = 100;
         int num;
 
-        num = random.nextInt(randomRange);
+        num = random.nextInt(RANDOM_RANGE);
         question = String.valueOf(num);
         correctAnswer = getCorrectAnswerByNum(num);
 

@@ -23,17 +23,17 @@ public final class Progression implements Game {
     @Override
     public void initNextQuestionValues() {
         Random random = new Random();
-        int randomRange = 10;
-        int offset = 5;
+        final int RANDOM_RANGE = 10;
+        final int OFFSET = 5;
         StringBuilder sequence = new StringBuilder();
         int firsValue;
         int step;
         int size;
         int missingPos;
 
-        firsValue = random.nextInt(randomRange);
-        step = random.nextInt(randomRange);
-        size = random.nextInt(randomRange) + offset;
+        firsValue = random.nextInt(RANDOM_RANGE);
+        step = random.nextInt(RANDOM_RANGE);
+        size = random.nextInt(RANDOM_RANGE) + OFFSET;
         missingPos = random.nextInt(size);
         sequence.append(firsValue);
 

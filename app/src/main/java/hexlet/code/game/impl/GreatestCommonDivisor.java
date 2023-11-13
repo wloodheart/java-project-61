@@ -23,12 +23,12 @@ public final class GreatestCommonDivisor implements Game {
     @Override
     public void initNextQuestionValues() {
         Random random = new Random();
-        int randomRange = 100;
+        int RANDOM_RANGE = 100;
         int a;
         int b;
 
-        a = random.nextInt(randomRange);
-        b = random.nextInt(randomRange);
+        a = random.nextInt(RANDOM_RANGE);
+        b = random.nextInt(RANDOM_RANGE);
         question = a + " " + b;
 
         correctAnswer = String.valueOf(gcdByEuclidAlgorithm(a, b));

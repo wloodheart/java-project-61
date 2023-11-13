@@ -25,13 +25,13 @@ public final class Calc implements Game {
     @Override
     public void initNextQuestionValues() {
         Random random = new Random();
-        int randomRange = 10;
+        final int RANDOM_RANGE = 10;
         int a;
         int b;
         char currentOperator;
 
-        a = random.nextInt(randomRange);
-        b = random.nextInt(randomRange);
+        a = random.nextInt(RANDOM_RANGE);
+        b = random.nextInt(RANDOM_RANGE);
         currentOperator = operators[random.nextInt(operators.length)];
 
         question = a + " " + currentOperator + " " + b;

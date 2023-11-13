@@ -12,7 +12,7 @@ import java.util.List;
 public class App {
     public static void main(String[] args) {
         Engine engine = new Engine();
-        int arrayOffset = 2;
+        final int ARRAY_OFFSET = 2;
 
         List<Game> games = List.of(
                 new Even(),
@@ -36,7 +36,7 @@ public class App {
         switch (userChoice) {
             case 0 -> System.exit(0);
             case 1 -> engine.greet();
-            default -> engine.playGame(games.get(userChoice - arrayOffset));
+            default -> engine.playGame(games.get(userChoice - ARRAY_OFFSET));
         }
     }
 }

@@ -25,8 +25,8 @@ public final class Even implements Game {
     @Override
     public void initNextQuestionValues() {
         Random random = new Random();
-        int randomRange = 100;
-        question = random.nextInt(randomRange);
+        final int RANDOM_RANGE = 100;
+        question = random.nextInt(RANDOM_RANGE);
         correctAnswer = getCorrectAnswerByQuestion(question);
     }
 

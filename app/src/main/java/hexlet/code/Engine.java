@@ -9,12 +9,12 @@ public final class Engine {
 
     public void playGame(Game game) {
         String userAnswer;
-        int gameIterations = 3;
+        final int GAME_ITERATIONS = 3;
 
         greet();
         System.out.println(game.getGameRule());
 
-        for (int i = 0; i < gameIterations; i++) {
+        for (int i = 0; i < GAME_ITERATIONS; i++) {
             game.initNextQuestionValues();
             userAnswer = enterFromConsole("Question: " + game.getQuestion() + "\nYour answer: ");
             if (!userAnswer.equalsIgnoreCase(game.getCorrectAnswer())) {
