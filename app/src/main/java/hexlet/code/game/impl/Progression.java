@@ -9,6 +9,8 @@ public final class Progression implements Game {
     private final String gameRule = "What number is missing in the progression?";
     private String question;
     private String correctAnswer;
+    private final int RANDOM_RANGE = 10;
+    private final int OFFSET = 5;
 
     @Override
     public String getGameName() {
@@ -23,8 +25,6 @@ public final class Progression implements Game {
     @Override
     public void initNextQuestionValues() {
         Random random = new Random();
-        final int RANDOM_RANGE = 10;
-        final int OFFSET = 5;
         StringBuilder sequence = new StringBuilder();
         int firsValue;
         int step;

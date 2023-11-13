@@ -10,9 +10,10 @@ import hexlet.code.game.impl.Prime;
 import java.util.List;
 
 public class App {
+    private static final int ARRAY_OFFSET = 2;
+
     public static void main(String[] args) {
         Engine engine = new Engine();
-        final int ARRAY_OFFSET = 2;
 
         List<Game> games = List.of(
                 new Even(),

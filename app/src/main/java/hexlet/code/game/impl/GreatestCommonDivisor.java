@@ -9,6 +9,7 @@ public final class GreatestCommonDivisor implements Game {
     private final String gameRule = "Find the greatest common divisor of given numbers.";
     private String question;
     private String correctAnswer;
+    private final int RANDOM_RANGE = 100;
 
     @Override
     public String getGameName() {
@@ -23,7 +24,6 @@ public final class GreatestCommonDivisor implements Game {
     @Override
     public void initNextQuestionValues() {
         Random random = new Random();
-        int RANDOM_RANGE = 100;
         int a;
         int b;
 

@@ -9,6 +9,7 @@ public final class Prime implements Game {
     private final String gameRule = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     private String question;
     private String correctAnswer;
+    private final int RANDOM_RANGE = 100;
 
     @Override
     public String getGameName() {
@@ -23,7 +24,6 @@ public final class Prime implements Game {
     @Override
     public void initNextQuestionValues() {
         Random random = new Random();
-        final int RANDOM_RANGE = 100;
         int num;
 
         num = random.nextInt(RANDOM_RANGE);

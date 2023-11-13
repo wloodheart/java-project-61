@@ -6,10 +6,10 @@ import java.util.Scanner;
 
 public final class Engine {
     private String userName;
+    private final int GAME_ITERATIONS = 3;
 
     public void playGame(Game game) {
         String userAnswer;
-        final int GAME_ITERATIONS = 3;
 
         greet();
         System.out.println(game.getGameRule());
