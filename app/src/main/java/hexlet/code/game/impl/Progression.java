@@ -24,7 +24,10 @@ public class Progression implements Game {
     public void initNextQuestionValues() {
         Random random = new Random();
         StringBuilder sequence = new StringBuilder();
-        int firsValue, step, size, missingPos;
+        int firsValue;
+        int step;
+        int size;
+        int missingPos;
 
         firsValue = random.nextInt(100);
         step = random.nextInt(100);

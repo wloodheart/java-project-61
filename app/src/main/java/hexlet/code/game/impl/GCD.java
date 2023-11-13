@@ -23,7 +23,8 @@ public class GCD implements Game {
     @Override
     public void initNextQuestionValues() {
         Random random = new Random();
-        int a, b;
+        int a;
+        int b;
 
         a = random.nextInt(100);
         b = random.nextInt(100);

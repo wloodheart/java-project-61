@@ -1,9 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.game.Game;
-import hexlet.code.game.impl.*;
-
-import java.util.List;
+import hexlet.code.game.impl.Calc;
+import hexlet.code.game.impl.Even;
+import hexlet.code.game.impl.GCD;
+import hexlet.code.game.impl.Progression;
+import hexlet.code.game.impl.Prime;
 
 public class App {
     public static void main(String[] args) {
@@ -28,6 +29,7 @@ public class App {
             case 4 -> engine.playGame(new GCD());
             case 5 -> engine.playGame(new Progression());
             case 6 -> engine.playGame(new Prime());
+            default -> main(args);
         }
     }
 }

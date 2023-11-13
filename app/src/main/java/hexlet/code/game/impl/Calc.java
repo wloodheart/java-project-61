@@ -3,7 +3,6 @@ package hexlet.code.game.impl;
 import hexlet.code.game.Game;
 
 import java.util.Random;
-import java.util.Scanner;
 
 public class Calc implements Game {
 
@@ -26,7 +25,8 @@ public class Calc implements Game {
     @Override
     public void initNextQuestionValues() {
         Random random = new Random();
-        int a, b;
+        int a;
+        int b;
         char currentOperator;
 
         a = random.nextInt(10);
@@ -36,10 +36,23 @@ public class Calc implements Game {
         question = a + " " + currentOperator + " " + b;
 
         switch (currentOperator) {
-            case '+' -> correctAnswer = String.valueOf(a + b);
-            case '-' -> correctAnswer = String.valueOf(a - b);
-            case '*' -> correctAnswer = String.valueOf(a * b);
+            case '+' -> addition(a, b);
+            case '-' -> subtraction(a, b);
+            case '*' -> multiplication(a, b);
+            default -> System.exit(0);
         }
+    }
+
+    private void addition(int a, int b) {
+        correctAnswer = String.valueOf(a + b);
+    }
+
+    private void subtraction(int a, int b) {
+        correctAnswer = String.valueOf(a - b);
+    }
+
+    private void multiplication(int a, int b) {
+        correctAnswer = String.valueOf(a * b);
     }
 
     @Override
