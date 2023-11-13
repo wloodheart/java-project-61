@@ -1,14 +1,26 @@
 package hexlet.code;
 
+import hexlet.code.game.Game;
 import hexlet.code.game.impl.Calc;
 import hexlet.code.game.impl.Even;
-import hexlet.code.game.impl.GCD;
+import hexlet.code.game.impl.GreatestCommonDivisor;
 import hexlet.code.game.impl.Progression;
 import hexlet.code.game.impl.Prime;
+
+import java.util.List;
 
 public class App {
     public static void main(String[] args) {
         Engine engine = new Engine();
+        int arrayOffset = 2;
+
+        List<Game> games = List.of(
+                new Even(),
+                new Calc(),
+                new GreatestCommonDivisor(),
+                new Progression(),
+                new Prime()
+        );
 
         System.out.println("""
                 Please enter the game number and press Enter.
@@ -24,12 +36,7 @@ public class App {
         switch (userChoice) {
             case 0 -> System.exit(0);
             case 1 -> engine.greet();
-            case 2 -> engine.playGame(new Even());
-            case 3 -> engine.playGame(new Calc());
-            case 4 -> engine.playGame(new GCD());
-            case 5 -> engine.playGame(new Progression());
-            case 6 -> engine.playGame(new Prime());
-            default -> main(args);
+            default -> engine.playGame(games.get(userChoice - arrayOffset));
         }
     }
 }

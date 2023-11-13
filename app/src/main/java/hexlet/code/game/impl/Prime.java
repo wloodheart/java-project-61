@@ -4,7 +4,7 @@ import hexlet.code.game.Game;
 
 import java.util.Random;
 
-public class Prime implements Game {
+public final class Prime implements Game {
     private final String gameName = "Prime";
     private final String gameRule = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     private String question;
@@ -23,9 +23,10 @@ public class Prime implements Game {
     @Override
     public void initNextQuestionValues() {
         Random random = new Random();
+        int randomRange = 100;
         int num;
 
-        num = random.nextInt(100);
+        num = random.nextInt(randomRange);
         question = String.valueOf(num);
         correctAnswer = getCorrectAnswerByNum(num);
 

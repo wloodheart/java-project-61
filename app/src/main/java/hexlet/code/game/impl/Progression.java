@@ -4,7 +4,7 @@ import hexlet.code.game.Game;
 
 import java.util.Random;
 
-public class Progression implements Game {
+public final class Progression implements Game {
     private final String gameName = "Progression";
     private final String gameRule = "What number is missing in the progression?";
     private String question;
@@ -23,15 +23,17 @@ public class Progression implements Game {
     @Override
     public void initNextQuestionValues() {
         Random random = new Random();
+        int randomRange = 10;
+        int offset = 5;
         StringBuilder sequence = new StringBuilder();
         int firsValue;
         int step;
         int size;
         int missingPos;
 
-        firsValue = random.nextInt(20);
-        step = random.nextInt(10);
-        size = random.nextInt(10) + 5;
+        firsValue = random.nextInt(randomRange);
+        step = random.nextInt(randomRange);
+        size = random.nextInt(randomRange) + offset;
         missingPos = random.nextInt(size);
         sequence.append(firsValue);
 

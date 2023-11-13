@@ -4,15 +4,17 @@ import hexlet.code.game.Game;
 
 import java.util.Scanner;
 
-public class Engine {
+public final class Engine {
     private String userName;
+
     public void playGame(Game game) {
         String userAnswer;
+        int gameIterations = 3;
 
         greet();
         System.out.println(game.getGameRule());
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < gameIterations; i++) {
             game.initNextQuestionValues();
             userAnswer = enterFromConsole("Question: " + game.getQuestion() + "\nYour answer: ");
             if (!userAnswer.equalsIgnoreCase(game.getCorrectAnswer())) {
@@ -23,7 +25,7 @@ public class Engine {
                 System.out.println("Correct!");
             }
         }
-        System.out.println("Congratulations, " + userName +"!");
+        System.out.println("Congratulations, " + userName + "!");
     }
 
     public String enterFromConsole(String message) {

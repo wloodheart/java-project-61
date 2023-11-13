@@ -4,7 +4,7 @@ import hexlet.code.game.Game;
 
 import java.util.Random;
 
-public class GCD implements Game {
+public final class GreatestCommonDivisor implements Game {
     private final String gameName = "GCD";
     private final String gameRule = "Find the greatest common divisor of given numbers.";
     private String question;
@@ -23,11 +23,12 @@ public class GCD implements Game {
     @Override
     public void initNextQuestionValues() {
         Random random = new Random();
+        int randomRange = 100;
         int a;
         int b;
 
-        a = random.nextInt(100);
-        b = random.nextInt(100);
+        a = random.nextInt(randomRange);
+        b = random.nextInt(randomRange);
         question = a + " " + b;
 
         correctAnswer = String.valueOf(gcdByEuclidAlgorithm(a, b));

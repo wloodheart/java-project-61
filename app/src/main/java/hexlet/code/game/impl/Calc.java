@@ -4,7 +4,7 @@ import hexlet.code.game.Game;
 
 import java.util.Random;
 
-public class Calc implements Game {
+public final class Calc implements Game {
 
     private final String gameName = "Calc";
     private final String gameRule = "What is the result of the expression?";
@@ -25,13 +25,14 @@ public class Calc implements Game {
     @Override
     public void initNextQuestionValues() {
         Random random = new Random();
+        int randomRange = 10;
         int a;
         int b;
         char currentOperator;
 
-        a = random.nextInt(10);
-        b = random.nextInt(10);
-        currentOperator = operators[random.nextInt(3)];
+        a = random.nextInt(randomRange);
+        b = random.nextInt(randomRange);
+        currentOperator = operators[random.nextInt(operators.length)];
 
         question = a + " " + currentOperator + " " + b;
 

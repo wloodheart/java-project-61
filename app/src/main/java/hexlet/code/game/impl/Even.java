@@ -4,7 +4,7 @@ import hexlet.code.game.Game;
 
 import java.util.Random;
 
-public class Even implements Game {
+public final class Even implements Game {
 
     private final String gameName = "Even";
     private final String gameRule = "Answer 'yes' if the number is even, otherwise answer 'no'.";
@@ -25,7 +25,8 @@ public class Even implements Game {
     @Override
     public void initNextQuestionValues() {
         Random random = new Random();
-        question = random.nextInt(100);
+        int randomRange = 100;
+        question = random.nextInt(randomRange);
         correctAnswer = getCorrectAnswerByQuestion(question);
     }
 
